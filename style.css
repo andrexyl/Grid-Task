@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     text-decoration: none;
 }
 .navbar{
@@ -16,6 +15,32 @@
     color: red;  
     margin-left: 10px;
 }
+
+.navbar > div:not(:nth-child(2)):hover {
+    background-color: #EFEFEF;
+    border-radius: 30px;
+    padding: 5px;
+    border: 1px solid #eeee;
+  }
+
+  /*.navbar .search2:hover {
+      padding: 0 1px;
+      background: red;
+  }
+*/
+  /*
+.navbar > div:not(:nth-child(4)):hover {
+    background-color: #EFEFEF;
+    border-radius: 50px;
+    padding: 10px;
+    border: 1px solid #eeee;
+  }*/
+
+  /*.pinterest-logo, .following, .search2, .bell, .comment, .profile-name, .drop-down:hover{
+    background-color: red;
+    border-radius: 50px;
+    border: 1px solid #eeee;
+  }*/
 
 .navbar div:nth-child(2) a{
     border-radius: 25px;
@@ -36,7 +61,8 @@
 
 .search2{
     position: relative;
-    min-width: 700px;
+    max-width: 1000px;
+    width: 100%;
     height: 30px;
     padding-left: 30px;
     background-color: #EFEFEF;
@@ -76,10 +102,39 @@
 }
 
 .container{
+    
     display: grid;
-    gap: 20px;
-    grid-auto-flow: row;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    grid-template-areas: "a b c d e f g h";
-    grid-auto-rows: 75px;
+    ;
+    grid-template-columns: repeat(auto-fit, minmax(1fr, 50px));
+    grid-template-areas: 
+            "a b c d e"
+}
+
+.slide1{
+    grid-area: a;
+}
+.slide2{
+    grid-area: b;
+}
+
+.slide3{
+    grid-area: c;
+}
+
+.slide4{
+    grid-area: d;
+}
+
+.slide5{
+    grid-area: e;
+}
+
+.slide6{
+    grid-area: f;
+}
+img {
+object-fit: cover;
+border-radius: 25px;
+margin-top: 20px;
+margin-left: 30px;
 }
